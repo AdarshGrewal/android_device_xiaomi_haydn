@@ -88,6 +88,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayGarnet \
     FrameworkOverlayGarnet \
+    SettingsOverlayGarnet \
     SystemUIOverlayGarnet \
     TelephonyOverlayGarnet \
     WifiOverlayGarnet
