@@ -89,9 +89,8 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    bootinfo.fingerprint=Redmi/garnet_in/garnet:13/TKQ1.221114.001/V14.0.2.0.TNRINXM:user/release-keys \
-    mtdoops.fingerprint=Redmi/garnet_in/garnet:13/TKQ1.221114.001/V14.0.2.0.TNRINXM:user/release-keys
-
+    bootinfo.fingerprint=$(LINEAGE_VERSION) \
+    mtdoops.fingerprint=$(LINEAGE_VERSION)
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
