@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=lisa
+DEVICE=haydn
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks
@@ -55,31 +55,14 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/bin/hw/dolbycodec2)
-            patchelf --replace-needed libavservices_minijail_vendor.so libavservices_minijail.so "${2}"
-            patchelf --replace-needed libcodec2_hidl@1.0.so libcodec2_hidl@1.0.stock.so "${2}"
-            ;;
-        vendor/etc/camera/pure*_parameter.xml)
+        vendor/etc/camera/pureShot_parameter.xml)
             sed -i "s/=\([0-9]\+\)>/=\"\1\">/g" "${2}"
             ;;
-        vendor/lib/libcodec2_hidl@1.0.stock.so)
-            patchelf --set-soname libcodec2_hidl@1.0.stock.so "${2}"
-            patchelf --replace-needed libcodec2_vndk.so libcodec2_vndk.stock.so "${2}"
-            ;;
-        vendor/lib/libcodec2_vndk.stock.so)
-            patchelf --set-soname libcodec2_vndk.stock.so "${2}"
-            ;;
         vendor/lib64/hw/camera.xiaomi.so)
-            # Before
-            # 21 00 80 52     mov        w1,#0x1
-            # 29 07 00 94     bl         <EXTERNAL>::android::hardware::configureRpcThr
-            # After
-            # 21 00 80 52     mov        w1,#0x1
-            # 1f 20 03 d5     nop
-            sed -i "s/\x21\x00\x80\x52\x29\x07\x00\x94/\x21\x00\x80\x52\x1f\x20\x03\xd5/g" "${2}"
+            "${SIGSCAN}" -p "52 07 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
-        vendor/lib64/libwa_sat.so)
-            sed -i 's/\/system\/lib64\([^\/]\)/\/vendor\/lib64\1/g' "${2}"
+        vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so)
+            "${SIGSCAN}" -p "21 00 80 52 7c 00 00 94" -P "21 00 80 52 1F 20 03 D5" -f "${2}"
             ;;
     esac
 }

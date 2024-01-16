@@ -19,9 +19,6 @@
     <!-- Pocket Lock -->
     <bool name="config_pocketModeSupported">false</bool>
 
-    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
-    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/qcom-battery/fastchg_mode</string>
-
     <!-- Whether to intercept inputs on screen off -->
     <bool name="config_enableKeyHandler">true</bool>
 
@@ -40,23 +37,4 @@
              8 - Camera
              9 - Dialer -->
     <integer name="config_doubleTapDefault">1</integer>
-
-    <!-- Defines the sysfs attribute path used by the device
-         to enable/disable DC dimming. -->
-    <string name="config_deviceDcDimmingSysfsNode">/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure</string>
-
-    <!-- Defines the value used by the device sysfs node
-         to enable DC dimming -->
-    <string name="config_deviceDcDimmingEnableValue">1</string>
-
-    <!-- Defines the value used by the device sysfs node
-         to disable DC dimming -->
-    <string name="config_deviceDcDimmingDisableValue">0</string>
-
-    <!-- Build fingerprint from stock ROM -->
-    <string name="config_stockFingerprint" translatable="false">Xiaomi/lisa_global/lisa:13/TKQ1.220829.002/V14.0.4.0.TKOMIXM:user/release-keys</string>
-
-    <!-- Device model (Build.MODEL) to spoof for netflix, if not empty -->
-    <string name="config_netflixSpoofModel" translatable="false">M2101K9G</string>
-
 </resources>

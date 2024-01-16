@@ -36,7 +36,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_yupik_qssi/audio_policy_configuration.xml
+    $(LOCAL_PATH)/configs/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml
 
 PRODUCT_ODM_PROPERTIES += \
     aaudio.mmap_policy=1 \
@@ -73,8 +73,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 
 # Camera
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
-
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
@@ -89,10 +87,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.miui.notch=1 \
-    ro.product.mod_device=lisa_global
-
 PRODUCT_VENDOR_PROPERTIES += \
     camera.disable_zsl_mode=1 \
     ro.hardware.camera=xiaomi
@@ -104,8 +98,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 TARGET_GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE := true
 
 PRODUCT_PACKAGES += \
-    disable_configstore \
-    lights.lisa
+    disable_configstore
 
 PRODUCT_ODM_PROPERTIES += \
     persist.sys.sf.color_mode=0 \
@@ -120,7 +113,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
     persist.sys.sf.native_mode=258 \
-    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.lahaina.api30 \
     ro.vendor.display.dither=true \
     ro.vendor.display.mi_calib.enable=true \
     ro.vendor.display.sensortype=2 \
@@ -167,7 +159,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.sys.fp.vendor=fpc
 
 # Firmware
-$(call inherit-product-if-exists, vendor/xiaomi/firmware/lisa/config.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/firmware/haydn/config.mk)
 
 # FRP
 PRODUCT_VENDOR_PROPERTIES += \
@@ -194,16 +186,15 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Init scripts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.usb.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.lisa.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.lisa.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.lisa.perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.lisa.perf.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.haydn.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.haydn.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.haydn.perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.haydn.perf.rc \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc \
     $(LOCAL_PATH)/rootdir/etc/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc \
-    $(LOCAL_PATH)/rootdir/etc/ueventd.lisa.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
+    $(LOCAL_PATH)/rootdir/etc/ueventd.haydn.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.mi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mi.usb.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.qcom.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.usb.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.sensors_fix.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.sensors_fix.sh
+    $(LOCAL_PATH)/rootdir/bin/init.qcom.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.usb.sh
 
 # IR
 PRODUCT_PACKAGES += \
@@ -215,7 +206,7 @@ PRODUCT_COPY_FILES += \
 
 # Kernel
 KERNEL_MODULES_INSTALL := dlkm
-KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/lisa/$(KERNEL_MODULES_INSTALL)/lib/modules
+KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/haydn/$(KERNEL_MODULES_INSTALL)/lib/modules
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -226,11 +217,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.crypto.dm_default_key.options_format.version=2 \
     ro.crypto.volume.metadata.method=dm-default-key \
     vendor.gatekeeper.disable_spu=true
-
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/configs/keylayout/lahaina-yupikqrd-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/lahaina-yupikqrd-snd-card_Button_Jack.kl
 
 # Media
 PRODUCT_PACKAGES += \
@@ -249,15 +235,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AOSPALisaFrameworksOverlay \
     AOSPALisaSystemUIOverlay \
-    LisaCNSettingsProviderOverlay \
-    LisaCNWifiOverlay \
     LisaCarrierConfigOverlay \
     LisaFrameworksOverlay \
-    LisaGLSettingsProviderOverlay \
-    LisaGLWifiOverlay \
-    LisaINSettingsProviderOverlay \
-    LisaINWifiOverlay \
-    LisaNfcOverlay \
     LisaSettingsOverlay \
     LisaSystemUIOverlay \
     LisaWifiOverlay \
@@ -331,13 +310,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.sys.thermal.data.path=/data/vendor/thermal/
 
 # USB
-ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.usb.config=mtp,adb
-endif
 
 # Vendor blobs
-$(call inherit-product, vendor/xiaomi/lisa/lisa-vendor.mk)
+$(call inherit-product, vendor/xiaomi/haydn/haydn-vendor.mk)
 
 # Verified Boot
 PRODUCT_COPY_FILES += \
