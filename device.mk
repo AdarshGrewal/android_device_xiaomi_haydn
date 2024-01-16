@@ -100,10 +100,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Device Settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Display / Graphics
 TARGET_GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE := true
 
