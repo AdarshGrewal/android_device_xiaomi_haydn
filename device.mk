@@ -104,8 +104,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 TARGET_GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE := true
 
 PRODUCT_PACKAGES += \
-    disable_configstore \
-    lights.lisa
+    disable_configstore
 
 PRODUCT_ODM_PROPERTIES += \
     persist.sys.sf.color_mode=0 \
