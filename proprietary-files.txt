@@ -636,7 +636,7 @@ vendor/etc/init/vendor.qti.diag.rc
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display
-vendor/bin/hw/vendor.qti.hardware.display.composer-service|129d35e3f6af66326f4a097ea390c88b6f1a3950
+vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/bin/init.qti.display_boot.sh
 vendor/lib64/libclient2slpi.notifier.so
 vendor/lib64/libdisp-aba.so
