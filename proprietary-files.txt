@@ -107,14 +107,14 @@ vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd
 
 # Audio configs
-vendor/etc/audio/sku_yupik/audio_effects.xml
-vendor/etc/audio/sku_yupik/audio_io_policy.conf
-vendor/etc/audio/sku_yupik/audio_platform_info_yupikqrd.xml
-vendor/etc/audio/sku_yupik/mixer_paths_overlay_dynamic.xml
-vendor/etc/audio/sku_yupik/mixer_paths_overlay_static.xml
-vendor/etc/audio/sku_yupik/mixer_paths_yupikqrd.xml
-vendor/etc/audio/sku_yupik/sound_trigger_mixer_paths_yupikqrd.xml
-vendor/etc/audio/sku_yupik/sound_trigger_platform_info.xml
+vendor/etc/audio/sku_lahaina/audio_effects.xml
+vendor/etc/audio/sku_lahaina/audio_io_policy.conf
+vendor/etc/audio/sku_lahaina/audio_platform_info_lahainaqrd.xml
+vendor/etc/audio/sku_lahaina/mixer_paths_overlay_dynamic.xml
+vendor/etc/audio/sku_lahaina/mixer_paths_overlay_static.xml
+vendor/etc/audio/sku_lahaina/mixer_paths_lahainaqrd.xml
+vendor/etc/audio/sku_lahaina/sound_trigger_mixer_paths_lahainaqrd.xml
+vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml
 
 # Audio firmware
 vendor/firmware/tfa98xx.cnt
@@ -787,13 +787,13 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IPA firmware
-vendor/firmware/yupik_ipa_fws.b00
-vendor/firmware/yupik_ipa_fws.b01
-vendor/firmware/yupik_ipa_fws.b02
-vendor/firmware/yupik_ipa_fws.b03
-vendor/firmware/yupik_ipa_fws.b04
-vendor/firmware/yupik_ipa_fws.elf
-vendor/firmware/yupik_ipa_fws.mdt
+vendor/firmware/ipa_fws.b00
+vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b04
+vendor/firmware/ipa_fws.elf
+vendor/firmware/ipa_fws.mdt
 
 # IR
 -vendor/etc/vintf/manifest/android.hardware.ir@1.0-service.xml
@@ -821,12 +821,12 @@ vendor/etc/init/vppservice.rc
 vendor/etc/media/video_system_specs.json
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
-vendor/etc/media_codecs_performance_yupik_v1.xml
+vendor/etc/media_codecs_performance_lahaina_v1.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_vendor.xml
-vendor/etc/media_profiles_yupik_v1.xml
-vendor/etc/media_yupik_v1/video_system_specs.json
+vendor/etc/media_profiles_lahaina_v1.xml
+vendor/etc/media_lahaina_v1/video_system_specs.json
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
@@ -883,9 +883,9 @@ vendor/lib64/vendor.qti.hardware.vpp@2.0.so
 vendor/bin/hw/dolbycodec2
 vendor/etc/dolby_vision.cfg
 vendor/etc/init/dolbycodec2.rc
-vendor/etc/media_codecs_system_default_yupik.xml
-vendor/etc/media_codecs_with_dolby_yupik.xml
-vendor/etc/media_codecs_yupik_v1.xml
+vendor/etc/media_codecs_system_default_lahaina.xml
+vendor/etc/media_codecs_with_dolby_lahaina.xml
+vendor/etc/media_codecs_lahaina_v1.xml
 vendor/lib/c2.dolby.avc.dec.so
 vendor/lib/c2.dolby.avc.sec.dec.so
 vendor/lib/c2.dolby.client.so
@@ -1205,20 +1205,28 @@ vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so
 
 # Sensors config
 vendor/etc/sensors/config/ak991x_dri_0.json
-vendor/etc/sensors/config/icm4x6xx_0.json
-vendor/etc/sensors/config/power_0.json
-vendor/etc/sensors/config/sm7350_ak991x_0.json
-vendor/etc/sensors/config/sm7350_default_sensors.json
-vendor/etc/sensors/config/sm7350_dynamic_sensors.json
-vendor/etc/sensors/config/sm7350_icm4x6xa_0.json
-vendor/etc/sensors/config/sm7350_icm4x6xx_0.json
-vendor/etc/sensors/config/sm7350_irq.json
-vendor/etc/sensors/config/sm7350_power_0.json
-vendor/etc/sensors/config/sm7350_stk3a6x_0.json
-vendor/etc/sensors/config/sm7350_sx932x_0.json
-vendor/etc/sensors/config/sm7350_sx933x_0.json
-vendor/etc/sensors/config/sm7350_tcs3701_new_arch.json
-vendor/etc/sensors/config/sm7350_tsl2540_0.json
+vendor/etc/sensors/config/bmp285_0.json
+vendor/etc/sensors/config/bu27030_0.json
+vendor/etc/sensors/config/bu27030_0_back.json
+vendor/etc/sensors/config/lsm6dso_0.json
+vendor/etc/sensors/config/sm8350_ak991x_0.json
+vendor/etc/sensors/config/sm8350_bmp285_0.json
+vendor/etc/sensors/config/sm8350_bu27030_0.json
+vendor/etc/sensors/config/sm8350_bu27030_0_back.json
+vendor/etc/sensors/config/sm8350_bu52053nvx_0.json
+vendor/etc/sensors/config/sm8350_default_sensors.json
+vendor/etc/sensors/config/sm8350_dynamic_sensors.json
+vendor/etc/sensors/config/sm8350_irq.json
+vendor/etc/sensors/config/sm8350_lsm6dso_0.json
+vendor/etc/sensors/config/sm8350_lsm6dst_0.json
+vendor/etc/sensors/config/sm8350_lsm6dst_1.json
+vendor/etc/sensors/config/sm8350_power_0.json
+vendor/etc/sensors/config/sm8350_sx932x_0.json
+vendor/etc/sensors/config/sm8350_sx932x_1.json
+vendor/etc/sensors/config/sm8350_tcs3408.json
+vendor/etc/sensors/config/sm8350_tcs3701.json
+vendor/etc/sensors/config/sm8350_tmd3719.json
+vendor/etc/sensors/config/sm8350_vl53l1_tof_0.json
 vendor/etc/sensors/config/sns_amd.json
 vendor/etc/sensors/config/sns_amd_sw_disabled.json
 vendor/etc/sensors/config/sns_amd_sw_enabled.json
@@ -1232,6 +1240,7 @@ vendor/etc/sensors/config/sns_ccd_v3_1_walk.json
 vendor/etc/sensors/config/sns_ccd_v3_walk.json
 vendor/etc/sensors/config/sns_cm.json
 vendor/etc/sensors/config/sns_dae.json
+vendor/etc/sensors/config/sns_dbtap.json
 vendor/etc/sensors/config/sns_device_orient.json
 vendor/etc/sensors/config/sns_diag_filter.json
 vendor/etc/sensors/config/sns_distance_bound.json
@@ -1245,13 +1254,11 @@ vendor/etc/sensors/config/sns_mag_cal.json
 vendor/etc/sensors/config/sns_mag_cal_legacy.json
 vendor/etc/sensors/config/sns_multishake.json
 vendor/etc/sensors/config/sns_nonui.json
-vendor/etc/sensors/config/sns_oem13.json
 vendor/etc/sensors/config/sns_pedometer.json
 vendor/etc/sensors/config/sns_rmd.json
 vendor/etc/sensors/config/sns_rotv.json
 vendor/etc/sensors/config/sns_sar_algo.json
 vendor/etc/sensors/config/sns_sar_algo_1.json
-vendor/etc/sensors/config/sns_screen_down.json
 vendor/etc/sensors/config/sns_smd.json
 vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json
@@ -1259,8 +1266,11 @@ vendor/etc/sensors/config/sns_tilt_sw_enabled.json
 vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/config/sx932x_0.json
-vendor/etc/sensors/config/sx933x_0.json
-vendor/etc/sensors/config/tsl2540_0.json
+vendor/etc/sensors/config/sx932x_1.json
+vendor/etc/sensors/config/tcs3408.json
+vendor/etc/sensors/config/tcs3701.json
+vendor/etc/sensors/config/tmd3719.json
+vendor/etc/sensors/config/vl53l1_tof_0.json
 
 # SOTER
 -vendor/app/SoterService/SoterService.apk
