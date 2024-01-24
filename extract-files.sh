@@ -56,7 +56,7 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/etc/camera/pureShot_parameter.xml)
-            sed -i "s/=\([0-9]\+\)>/=\"\1\">/g" "${2}"
+            sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
         vendor/lib64/hw/camera.xiaomi.so)
             "${SIGSCAN}" -p "52 07 00 94" -P "1F 20 03 D5" -f "${2}"

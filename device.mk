@@ -21,18 +21,14 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_vendor=true
 
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti \
-    android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service \
+    android.hardware.boot@1.2-impl-qti \
+    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-service \
     checkpoint_gc \
     otapreopt_script \
     update_engine \
     update_engine_sideload \
     update_verifier
-
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -113,20 +109,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
     persist.sys.sf.native_mode=258 \
-    ro.vendor.display.dither=true \
-    ro.vendor.display.mi_calib.enable=true \
     ro.vendor.display.sensortype=2 \
-    ro.vendor.histogram.enable=true \
-    ro.vendor.xiaomi.bl.poll=true \
     vendor.display.qdcm.mode_combine=2
-
-# Doze
-PRODUCT_PACKAGES += \
-    ParanoidDoze
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sensor.pickup=xiaomi.sensor.pickup \
-    ro.sensor.pickup.lower.value=2
 
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
@@ -149,14 +133,10 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
-
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.hardware.fingerprint=fpc \
-    persist.vendor.sys.fp.vendor=fpc
 
 # Firmware
 $(call inherit-product-if-exists, vendor/xiaomi/firmware/haydn/config.mk)
@@ -225,7 +205,8 @@ PRODUCT_PACKAGES += \
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/xiaomi
 
 # Neural networks
 PRODUCT_PACKAGES += \
