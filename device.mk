@@ -214,8 +214,16 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    WifiOverlay \
     CarrierConfigOverlay \
+    HaydnCNSettingsProviderOverlay \
+    HaydnCNWifiOverlay \
+    HaydnGLSettingsProviderOverlay \
+    HaydnGLWifiOverlay \
+    HaydnINSettingsProviderOverlay \
+    HaydnINWifiOverlay \
+    HaydnproCNSettingsProviderOverlay \
+    HaydnproCNWifiOverlay \
+    WifiOverlay
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -242,7 +250,23 @@ TARGET_BOARD_PLATFORM := lahaina
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # QC common
-TARGET_COMMON_QTI_COMPONENTS := all
+TARGET_COMMON_QTI_COMPONENTS := \
+    adreno \
+    alarm \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    init \
+    media \
+    nfc \
+    perf \
+    telephony \
+    usb \
+    vibrator \
+    wfd \
+    wlan
 
 # QTEE
 PRODUCT_VENDOR_PROPERTIES += \
