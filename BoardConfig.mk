@@ -23,6 +23,7 @@ TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES += \
+    $(KERNEL_MODULES_OUT)/cs35l41_dlkm.ko \
     $(KERNEL_MODULES_OUT)/focaltech_touch.ko \
     $(KERNEL_MODULES_OUT)/fpc1020_tee.ko \
     $(KERNEL_MODULES_OUT)/qcom-hv-haptics.ko \
