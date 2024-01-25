@@ -103,9 +103,6 @@ PRODUCT_ODM_PROPERTIES += \
     ro.surface_flinger.set_touch_timer_ms=800 \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.sf.force_hwc_brightness=1
-
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
     persist.sys.sf.native_mode=258 \
