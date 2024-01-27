@@ -18,7 +18,7 @@ service secureelement-hal_1_2 /vendor/bin/hw/vendor.qti.secure_element@1.2-servi
     group system
     disabled
 
-service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc_snxxx@1.2-service
+service nqnfc_2_0_hal_service /vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
     override
     class hal
     user nfc
@@ -28,12 +28,12 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc_snxxx@1.2-ser
 on boot && property:ro.boot.product.hardware.sku=haydn
     enable qti_esepowermanager_service_1_1
     enable secureelement-hal_1_2
-    enable vendor.nfc_hal_service
+    enable nqnfc_2_0_hal_service
 
 on boot && property:ro.boot.product.hardware.sku=haydnpro
     enable qti_esepowermanager_service_1_1
     enable secureelement-hal_1_2
-    enable vendor.nfc_hal_service
+    enable nqnfc_2_0_hal_service
 
 on boot && property:ro.boot.hwc=CN
     setprop bluetooth.device.default_name "Redmi K40 Pro"
