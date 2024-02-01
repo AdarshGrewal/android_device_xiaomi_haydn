@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
     HaydnproCNWifiOverlay
 
 # Refresh Rate
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_ODM_PROPERTIES += \
     ro.surface_flinger.use_content_detection_for_refresh_rate=false
 
 # Soong namespaces
