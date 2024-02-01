@@ -22,18 +22,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.haydn.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.haydn.rc
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
-
-# Overlays-RRO
 PRODUCT_PACKAGES += \
     HaydnCNSettingsProviderOverlay \
     HaydnCNWifiOverlay \
+    HaydnFrameworksOverlay \
     HaydnGLSettingsProviderOverlay \
     HaydnGLWifiOverlay \
     HaydnINSettingsProviderOverlay \
     HaydnINWifiOverlay \
+    HaydnSettingsOverlay \
+    HaydnSystemUIOverlay \
     HaydnproCNSettingsProviderOverlay \
     HaydnproCNWifiOverlay
 
