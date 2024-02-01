@@ -594,29 +594,6 @@ vendor/firmware/ipa_fws.elf
 vendor/firmware/ipa_fws.mdt
 
 # Media (VPU firmware)
-vendor/firmware/vpu20_2v.b00
-vendor/firmware/vpu20_2v.b01
-vendor/firmware/vpu20_2v.b02
-vendor/firmware/vpu20_2v.b03
-vendor/firmware/vpu20_2v.b04
-vendor/firmware/vpu20_2v.b05
-vendor/firmware/vpu20_2v.b06
-vendor/firmware/vpu20_2v.b07
-vendor/firmware/vpu20_2v.b08
-vendor/firmware/vpu20_2v.b09
-vendor/firmware/vpu20_2v.b10
-vendor/firmware/vpu20_2v.b11
-vendor/firmware/vpu20_2v.b12
-vendor/firmware/vpu20_2v.b13
-vendor/firmware/vpu20_2v.b14
-vendor/firmware/vpu20_2v.b15
-vendor/firmware/vpu20_2v.b16
-vendor/firmware/vpu20_2v.b17
-vendor/firmware/vpu20_2v.b18
-vendor/firmware/vpu20_2v.b19
-vendor/firmware/vpu20_2v.mbn
-vendor/firmware/vpu20_2v.mdt
-vendor/firmware/vpu20_2v_unsigned.mbn
 vendor/firmware/vpu20_4v.b00
 vendor/firmware/vpu20_4v.b01
 vendor/firmware/vpu20_4v.b02
