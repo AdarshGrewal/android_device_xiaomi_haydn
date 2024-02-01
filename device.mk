@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     HaydnCNSettingsProviderOverlay \
     HaydnCNWifiOverlay \
+    HaydnFrameworksAOSPAOverlay \
     HaydnFrameworksOverlay \
     HaydnGLSettingsProviderOverlay \
     HaydnGLWifiOverlay \
