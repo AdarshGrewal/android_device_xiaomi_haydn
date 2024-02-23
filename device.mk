@@ -35,6 +35,13 @@ PRODUCT_PACKAGES += \
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Init
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
