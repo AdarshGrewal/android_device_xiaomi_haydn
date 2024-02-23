@@ -42,6 +42,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)-prebuilt/images/dtb.img:dtb.img
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
