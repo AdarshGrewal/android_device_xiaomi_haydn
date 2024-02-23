@@ -65,6 +65,3 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
-
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 32
