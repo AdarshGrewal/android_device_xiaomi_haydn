@@ -4451,14 +4451,14 @@ product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
 system_ext/app/ImsRcsService/ImsRcsService.apk
-system_ext/app/QtiTelephony/QtiTelephony.apk|7fadfcfd6e779f6254a684ad879a5fa367369ad5
+system_ext/app/QtiTelephony/QtiTelephony.apk|479447d498d89f95daa03a274bec74f7efd188a8
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/framework/qcrilhook.jar
-system_ext/framework/qti-telephony-common.jar|be8250f4b8430754eabca59afa08a7202d404c3c
+system_ext/framework/qti-telephony-common.jar|7661fccf9c08dabe9ebb9be1814ed58be60c9814
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
@@ -4478,5 +4478,5 @@ system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
-system_ext/priv-app/ims/ims.apk|61b2c6e0a7fe4979390cd7a7e9b1f519e63b939c
+system_ext/priv-app/ims/ims.apk|00d47c407d781498328d008f9fffc3690c0194e0
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
