@@ -84,6 +84,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-V1-ndk_platform.vendor
 
+# Overlay
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlayGarnet \
+    FrameworkOverlayGarnet \
+    SystemUIOverlayGarnet \
+    TelephonyOverlayGarnet \
+    WifiOverlayGarnet
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
